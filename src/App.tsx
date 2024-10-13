@@ -33,9 +33,7 @@ function App() {
     const fetchPlatforms = async () => {
       setIsFetchingPlatforms(true);
       try {
-        const response = await fetch(
-          "https://togglespoc.s3.amazonaws.com/platforms.json"
-        );
+        const response = await fetch("<S3_BUCKET_URL>/platforms.json");
         if (!response.ok) {
           throw new Error("Failed to fetch platforms list.");
         }
@@ -65,9 +63,7 @@ function App() {
         setIsFetchingFeatures(true);
         try {
           const response = await fetch(
-            `https://togglespoc.s3.amazonaws.com/platforms/${encodeURIComponent(
-              platform
-            )}.json`
+            `<S3_BUCKET_URL>/platforms/${encodeURIComponent(platform)}.json`
           );
 
           if (!response.ok) {
