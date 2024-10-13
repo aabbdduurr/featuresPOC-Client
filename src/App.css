@@ -1,38 +1,124 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
 .App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
   text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form Styles */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+form > div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+select,
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdfe3;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+select:disabled {
+  background-color: #e9ecef;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Feature Value and Reasoning */
+.result {
+  margin-top: 40px;
+}
+
+.result h2 {
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.result h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.result ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.result li {
+  margin-bottom: 10px;
+}
+
+/* Error Message */
+.error {
+  margin-top: 20px;
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 15px;
+  border: 1px solid #e0b4b4;
+  border-radius: 4px;
+}
+
+/* Loading Indicators */
+.loading {
+  display: inline-block;
+  margin-left: 10px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  button {
+    width: 100%;
   }
 }
