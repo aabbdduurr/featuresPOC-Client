@@ -21,3 +21,5 @@ Change all instances of `<S3_BUCKET_URL>` in the `src/App.tsx` file to the URL o
 4. Open `http://localhost:3000` in your browser
 
 ## License
+
+Use it as you like. No restrictions.
